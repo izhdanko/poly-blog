@@ -1,0 +1,77 @@
+<h1>Polymorphic associations demonstration blog.</h1>
+
+<br />
+<br />
+<br />
+
+<p><b>Polymorphic associations.</b> In Ruby on Rails, a polymorphic association is an Active Record association that can connect a model to multiple other models.</p>
+
+<p>For example: model Comment connected to models: Post, Image, Link.</p>
+
+<p style="color: green"><%= notice %></p>
+
+<h2>Posts</h2>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <div class="form-group mb-3">
+      <%= link_to "Show this post", post %>
+    </div>
+  <% end %>
+</div>
+
+<div class="form-group mb-3">
+  <%= link_to "New post", new_post_path %>
+</div>  
+
+<hr />
+
+<h2>Images</h2>
+
+<div id="images">
+  <% @images.each do |image| %>
+    <%= render image %>
+    <div class="form-group mb-3">
+      <%= link_to "Show this image", image %>
+    </div>
+  <% end %>
+</div>
+
+<div class="form-group mb-3">
+  <%= link_to "New image", new_image_path %>
+</div>  
+
+<hr />
+
+<h2>Links</h2>
+
+<div id="links">
+  <% @links.each do |link| %>
+    <%= render link %>
+    <div class="form-group mb-3">
+      <%= link_to "Show this link", link %>
+    </div>
+  <% end %>
+</div>
+
+<div class="form-group mb-3">
+  <%= link_to "New link", new_link_path %>
+</div>  
+
+<hr />
+
+<h2>Comments</h2>
+
+<div id="comments">
+  <% @comments.each do |comment| %>
+    <%= render comment %>
+    <div class="form-group mb-3">
+      <%= link_to "Show this comment", comment %>
+    </div>
+  <% end %>
+</div>
+
+<div class="form-group mb-3">
+  <%= link_to "New comment", new_comment_path %>
+</div>
